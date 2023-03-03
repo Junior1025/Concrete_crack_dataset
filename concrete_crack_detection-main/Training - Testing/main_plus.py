@@ -1,5 +1,5 @@
-data_directory = "C:/Users/Administrator/Scripts/concrete_crack_detection-main/concrete_crack_detection-main/Training - Testing/DATA"
-exp_directory = "C:/Users/Administrator/Scripts/concrete_crack_detection-main/concrete_crack_detection-main/Training - Testing/Checkpoints"
+data_directory = "./DATA"
+exp_directory = "./Checkpoints"
 import multiprocessing
 if __name__ == '__main__':
     from multiprocessing import freeze_support
