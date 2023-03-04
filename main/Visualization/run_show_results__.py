@@ -12,12 +12,12 @@ import torch
 
 # Load the trained model, you could possibly change the device from cpu to gpu if 
 # you have your gpu configured.
-model = torch.load(f'./saved_stored_weights/LCW_cracked_weights_20.pt', map_location=torch.device('cuda'))
+model = torch.load(f'../Training-Testing/Checkpoints/weights_7.pt', map_location=torch.device('cuda'))
 
 # Set the model to evaluate mode
 model.eval()
 
-source_image_dir = './Test/LCW_LCW_crack/Images/'
+source_image_dir = './Test/Images/'
 destination_mask = './predicted_masks/var_compare_LCW_cracked/'
 destination_overlays = './combined_overlays/var_compare_LCW_cracked/'
 
