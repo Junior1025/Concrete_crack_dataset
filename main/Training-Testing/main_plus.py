@@ -1,5 +1,5 @@
 data_directory = "./DATA"
-exp_directory = "./Checkpoints"
+exp_directory = "./Checkpoint"
 import multiprocessing
 if __name__ == '__main__':
     from multiprocessing import freeze_support
