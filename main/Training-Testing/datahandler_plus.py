@@ -207,7 +207,7 @@ def get_dataloader_sep_folder(data_dir, imageFolder='Images', maskFolder='Masks'
                                     imageFolder=imageFolder) for x in ['Train', 'Test']}
     
     # This line remains the same since it is a built-in pytorch function   
-    dataloaders = {x: DataLoader(image_datasets[x], batch_size=batch_size, shuffle=False, num_workers=8, drop_last=True) for x in ['Train', 'Test']}
+    dataloaders = {x: DataLoader(image_datasets[x], batch_size=batch_size, shuffle=True, num_workers=8, drop_last=True) for x in ['Train', 'Test']}
     
     return dataloaders
 
@@ -228,6 +228,6 @@ def get_dataloader_single_folder(data_dir, imageFolder='Images', maskFolder='Mas
                                     fraction=fraction, subset=x, transform=data_transforms[x]) for x in ['Train', 'Test']}
     
     # This line remains the same since it is a built-in pytorch function
-    dataloaders = {x: DataLoader(image_datasets[x], batch_size=batch_size,shuffle=False, num_workers=8, drop_last=True) for x in ['Train', 'Test']}
+    dataloaders = {x: DataLoader(image_datasets[x], batch_size=batch_size,shuffle=True, num_workers=8, drop_last=True) for x in ['Train', 'Test']}
     
     return dataloaders
