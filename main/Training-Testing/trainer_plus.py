@@ -12,7 +12,7 @@ def train_model(model, criterion, dataloaders, optimizer, metrics, bpath, num_ep
     best_loss = 1e10
     best_f1_score = 0
     # Use gpu if available
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda")
     model.to(device)
     # Initialize the log file for training and testing loss and metrics
     fieldnames = ['epoch', 'Train_loss', 'Test_loss'] + \
