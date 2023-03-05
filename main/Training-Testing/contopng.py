@@ -2,8 +2,8 @@ import os
 
 from PIL import Image
 
-path = r'./Test/masks'
-newpath = r'./Test/masks1'
+path = r'./DATA/Train/masks'
+newpath = r'./DATA/Train/masks1'
 
 
 def picture(path):
