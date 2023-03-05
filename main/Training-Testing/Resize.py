@@ -25,5 +25,5 @@ def resize_images(folder_path, width=512, height=512):
 
 
 # 调用示例
-folder_path = './DATA/Test/images'
+folder_path = ''
 resize_images(folder_path)
