@@ -175,7 +175,7 @@ class Normalize(object):
                 'mask': mask.type(torch.FloatTensor)/255}
 
 
-def get_dataloader_sep_folder(data_dir, imageFolder='Images', maskFolder='Masks', batch_size=4):
+def get_dataloader_sep_folder(data_dir, imageFolder='images', maskFolder='masks', batch_size=4):
     """
         Create Train and Test dataloaders from two separate Train and Test folders.
         The directory structure should be as follows.
