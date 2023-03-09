@@ -16,7 +16,7 @@ def buildImageFileList_sorted(TEST_IMAGES_DIR):
     image_names = []
     
     directory = os.listdir(TEST_IMAGES_DIR)
-    sortedDir = sorted(directory,key=lambda x: int(x.split('_')[0]))
+    sortedDir = sorted(directory, key=lambda x: int(x.split('_')[0]))
     
     for imageFileName in sortedDir:
         path = TEST_IMAGES_DIR + imageFileName

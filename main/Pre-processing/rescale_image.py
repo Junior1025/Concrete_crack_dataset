@@ -10,6 +10,6 @@ from image_utils import rescale
 
 # rescale(source_image_folder, destination, dimension):
 dimension = 512
-source = './Test/conglomerate/Images/'
-destination = './Test/Images_512x512/'
+source = '../Training-Testing/DATA/Train/images1/'
+destination = '../Training-Testing/DATA/Train/images/'
 rescale(source, destination, dimension)

@@ -122,7 +122,7 @@ def rescale_mask(source_image_folder, destination, dimension):
     for filename in tqdm(os.listdir(source_image_folder)):
         im1 = cv2.imread(source_image_folder + '/' + filename) 
         
-        image = cv2.resize(im1, (dimension,dimension), interpolation=cv2.INTER_NEAREST)            
+        image = cv2.resize(im1, (dimension, dimension), interpolation=cv2.INTER_NEAREST)
                
         cv2.imwrite(destination + '/' + filename, image)       
         
@@ -409,12 +409,12 @@ def mask_to_binary_image(source_mask_folder, destination):
         average = np.average(grey_scale)
         if average > 100:   
             # Greyscale to Binary
-            binary = cv2.threshold(grey_scale, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+            binary = cv2.threshold(grey_scale, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
         else:
-            binary = cv2.threshold(grey_scale, 0, 255,cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
+            binary = cv2.threshold(grey_scale, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
             
         filename, ext = filename.split('.')
-        np.save(destination+filename+'.npy', binary)
+        np.save(destination + '/' + filename +'.npy', binary)
         # save the image in the destination folder
         # cv2.imwrite(destination + '/' + filename, binary)
         

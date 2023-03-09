@@ -10,6 +10,6 @@ from image_utils import rescale_mask
 
 # rescale(source_image_folder, destination, dimension):
 dimension = 512
-source = './Test/Masks/'
-destination = './Test/Masks_512x512/'
+source = '../Training-Testing/DATA/Test/masks1/'
+destination = '../Training-Testing/DATA/Test/masks/'
 rescale_mask(source, destination, dimension)

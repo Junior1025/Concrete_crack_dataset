@@ -12,14 +12,14 @@ import torch
 
 # Load the trained model, you could possibly change the device from cpu to gpu if 
 # you have your gpu configured.
-model = torch.load(f'../Training-Testing/Checkpoints/weights_7.pt', map_location=torch.device('cuda'))
+model = torch.load(f'../Training-Testing/3-8-2/weights.pt', map_location=torch.device('cuda'))
 
 # Set the model to evaluate mode
 model.eval()
 
 source_image_dir = './Test/Images/'
-destination_mask = './predicted_masks/var_compare_LCW_cracked/'
-destination_overlays = './combined_overlays/var_compare_LCW_cracked/'
+destination_mask = './output20+1/masks/'
+destination_overlays = './output20+1/overlays/'
 
 for image_name in tqdm(os.listdir(source_image_dir)):
     print(image_name)

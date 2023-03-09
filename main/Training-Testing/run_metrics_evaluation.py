@@ -14,17 +14,17 @@ from metric_evaluation import plot_confusion_matrix, iterate_data
 
 # './Test/Test_LCW/Test/'
 # './Test/LCW_cracked/'
-data_dir = './DATA/'
-batchsize = 64
+data_dir = './DATA/Test/'
+batchsize = 2
 
-model = torch.load(f'./Models/crack_weights_20.pt', map_location=torch.device('cuda'))
+model = torch.load(f'./Checkpoints/weights_20.pt', map_location=torch.device('cuda'))
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
 model.to(device)
 model.eval() 
 ##############################################################################
 
-iOU, f1, confm_sum = iterate_data(model, data_dir, new_image_dir='./DATA/')
+iOU, f1, confm_sum = iterate_data(model, data_dir)
 print('iOU: ' + str(iOU))
 print('f1 score: ' + str(f1))
 plot_confusion_matrix(confm_sum, target_names=['Background', 'Crack'], normalize=True, 
